@@ -87,5 +87,37 @@ body {
   border: 1px solid #eee;
 }
 
+/* -------------------------------
+ * 生い立ち
+ * ------------------------------*/
+.history {
+  text-align: center;
+}
+
+/* -------------------------------
+ * 外部ドメインへの遷移
+ * ------------------------------*/
 .external_page {
+  text-align: center;
+  letter-spacing: 1px;
+}
+.external_page ul {
+  list-style: none;
+}
+.external_page ul li {
+  display: inline-block;
+  margin-right: 7em;
+}
+.external_page ul li:last-child { /* 上でできたマージンは最後に入らないので相殺　*/
+  margin-right: -7em;
+}
+.external_page ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.15s;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.external_page ul li a:hover {
+  color: #d03c56;
 }
