@@ -90,8 +90,73 @@ body {
 /* -------------------------------
  * 生い立ち
  * ------------------------------*/
-.history {
+.history_list {
+  margin: 10px 50px 40px;
+}
+.info_content {
+}
+.info_content span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.content_label {
+  background-color: #ff69b4;
   text-align: center;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  float: right;
+}
+.history_list ul {
+  display: block;
+  list-style: none;
+  height: 100px;
+}
+.history_list ul li, .info_content {
+  display: inline-block;
+  margin-top: 30px;
+}
+.info_content {
+  margin-left: 3px;
+  width: 100px;
+  font-size: 1.5rem;
+}
+
+.vertical_line {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  margin: 25px 10px 0;
+  vertical-align: top;
+}
+.head_content {
+ 	position: relative;
+ 	margin: 1.5em 0 1.5em 15px;
+  padding: 20px 30px 20px 20px;
+  height: 90%;
+	min-width: 120px;
+ 	max-width: 100%;
+ 	color: #555;
+  background: #eee;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 1.8em;
+}
+.head_content:before{
+	content: "";
+	position: absolute;
+	top: 60%;
+	left: -30px;
+ 	margin-top: -15px;
+	border: 15px solid transparent;
+	border-right: 15px solid #444;
+}
+.head_content p {
+	margin: 0;
+	padding: 0;
 }
 
 /* -------------------------------
