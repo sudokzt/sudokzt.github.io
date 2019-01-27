@@ -56,7 +56,7 @@ body {
   border: 1px solid #444;
 }
 .left_content .image:hover {
-  animation: spin 10s linear forwards;
+  animation: spin 10s linear infinite;
 }
 @keyframes spin  {
    0% {transform: rotate(0deg);}
@@ -101,13 +101,27 @@ body {
   margin-bottom: 8px;
 }
 .content_label {
-  background-color: #ff69b4;
   text-align: center;
   display: inline-block;
   padding: 4px;
   border-radius: 4px;
   font-size: 1.3rem;
   float: right;
+}
+.info_content .other {
+  background-color: #ffb7b7;
+}
+.info_content .programming {
+  background-color: #b7ffb7;
+}
+.info_content .intern {
+  background-color: #b7ffff;
+}
+.info_content .ivent {
+  background-color: #ffffb7;
+}
+.info_content .contet {
+  background-color: #dbb7ff;
 }
 .history_list ul {
   display: block;
@@ -129,21 +143,20 @@ body {
   width: 1px;
   height: 100%;
   background-color: #000;
-  margin: 25px 10px 0;
+  margin: 25px 0 0 10px;
   vertical-align: top;
 }
 .head_content {
  	position: relative;
- 	margin: 1.5em 0 1.5em 15px;
+ 	margin: 1.5em 0 1.5em 10px;
   padding: 20px 30px 20px 20px;
   height: 90%;
-	min-width: 120px;
- 	max-width: 100%;
  	color: #555;
   background: #eee;
   border: 1px solid #444;
   border-radius: 5px;
   font-size: 1.8em;
+  transition: all 0.3s linear;
 }
 .head_content:before{
 	content: "";
@@ -152,11 +165,16 @@ body {
 	left: -30px;
  	margin-top: -15px;
 	border: 15px solid transparent;
-	border-right: 15px solid #444;
+	border-right: 15px solid #666;
 }
-.head_content p {
-	margin: 0;
-	padding: 0;
+.head_content:hover {
+  position: relative;
+  width: 80%;
+  height: 200%;
+  top: -60%;
+  z-index: 9999;
+  background-color: #ffb7b7;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
 
 /* -------------------------------
@@ -169,14 +187,14 @@ body {
 .external_page ul {
   display: inline-block;
   list-style: none;
-  margin: 4px 0;
+  margin: 6px 0;
 }
 .external_page ul li {
   display: inline-block;
-  margin-right: 7em;
+  margin-right: 10em;
 }
 .external_page ul li:last-child { /* 上でできたマージンは最後に入らないので相殺　*/
-  margin-right: -7em;
+  margin-right: -10em;
 }
 .external_page ul li a {
   text-decoration: none;
@@ -187,4 +205,5 @@ body {
 }
 .external_page ul li a:hover {
   color: #d03c56;
+  font-size: 1.2em;
 }
