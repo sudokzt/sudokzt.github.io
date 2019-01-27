@@ -98,11 +98,13 @@ body {
  * 外部ドメインへの遷移
  * ------------------------------*/
 .external_page {
-  text-align: center;
   letter-spacing: 1px;
+  text-align: center;
 }
 .external_page ul {
+  display: inline-block;
   list-style: none;
+  margin: 4px 0;
 }
 .external_page ul li {
   display: inline-block;
