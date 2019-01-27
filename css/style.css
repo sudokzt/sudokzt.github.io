@@ -33,27 +33,27 @@ body {
  * 基本情報
  * ------------------------------*/
 .introduce {
-  margin: 130px 60px;
+  margin: 100px 60px;
   overflow: hidden;
 	transition-duration: 0.8s;	/*変化に掛かる時間*/
 }
 .introduce:hover {
-  transform: scale(1.3);	/*画像の拡大率*/
+  transform: scale(1.15);	/*画像の拡大率*/
 }
 .introduce .left_content {
   float: left;
-  width: 56%;
+  width: 52%;
   text-align: center;
 }
 .introduce .right_content {
   float: right;
-  width: 44%;
+  width: 48%;
 }
 .left_content .image {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
-  border: 1px solid #444;
+  border: 2px solid #444;
 }
 .left_content .image:hover {
   animation: spin 10s linear infinite;
@@ -78,8 +78,12 @@ body {
   letter-spacing: 2px;
   line-height: 3em;
   transition: all 0.15s;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #444;
+  border-radius: 5px;
   color:  #444;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  padding: 2px 8px;
+  margin-bottom: 8px;
 }
 .item-list li:hover {
   color: #d03c56;
@@ -91,7 +95,7 @@ body {
  * 生い立ち
  * ------------------------------*/
 .history_list {
-  margin: 10px 50px 40px;
+  margin: 10px 50px 70px;
 }
 .info_content {
 }
@@ -151,21 +155,22 @@ body {
  	margin: 1.5em 0 1.5em 10px;
   padding: 20px 30px 20px 20px;
   height: 90%;
- 	color: #555;
-  background: #eee;
-  border: 1px solid #444;
+ 	color: #444;
+  background: #fff;
+  border: 1px solid #000;
   border-radius: 5px;
   font-size: 1.8em;
   transition: all 0.3s linear;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
 }
-.head_content:before{
+.head_content::before {
 	content: "";
 	position: absolute;
 	top: 60%;
 	left: -30px;
  	margin-top: -15px;
 	border: 15px solid transparent;
-	border-right: 15px solid #666;
+  border-right: 15px solid #444;
 }
 .head_content:hover {
   position: relative;
@@ -206,4 +211,9 @@ body {
 .external_page ul li a:hover {
   color: #d03c56;
   font-size: 1.2em;
+}
+footer {
+  margin-bottom: 30px;
+  line-height: 40px;
+  text-align: center;
 }
