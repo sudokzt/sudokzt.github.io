@@ -28,6 +28,9 @@ body {
     hsla(0, 0%, 100%, 0) 100%) 0 0 100%;
   border-style: solid;
 }
+.bold_font {
+  background: linear-gradient(transparent 60%, #ff99ff 60%);
+}
 
 /* -------------------------------
  * 基本情報
@@ -85,8 +88,7 @@ body {
   padding: 2px 8px;
   margin-bottom: 8px;
 }
-.item-list li:hover,
-.item-list li:active, {
+.item-list li:hover {
   color: #d03c56;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
   border: 1px solid #eee;
@@ -131,65 +133,78 @@ body {
 }
 .history_list ul {
   display: block;
-  list-style: none;
   height: 100px;
+  list-style: none;
 }
 .history_list ul li, .info_content {
   display: inline-block;
   margin-top: 30px;
 }
 .info_content {
-  margin-left: 3px;
-  width: 100px;
+  width: 125px;
   font-size: 1.5rem;
 }
 
 .vertical_line {
   display: inline-block;
-  width: 1px;
   height: 100%;
+  width: 1px;
   background-color: #000;
   margin: 25px 0 0 10px;
   vertical-align: top;
 }
 .head_content {
  	position: relative;
+  display: inline-block;
  	margin: 1.5em 0 1.5em 10px;
   padding: 20px 30px 20px 20px;
   height: 90%;
-  max-width: 80%;
- 	color: #444;
-  background: #fff;
+  width: 80%;
+ 	background: #fff;
   border: 1px solid #000;
   border-radius: 5px;
-  font-size: 1.8em;
-  transition: all 0.3s linear;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-  white-space: initial;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.8em;
   line-height: 1.5em;
+  color: #444;
+  white-space: nowrap;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s linear;
 }
 .head_content p {
   font-size: 0.8em;
+  display: inline;
+}
+.head_content a {
+  text-decoration: none;
+  font-weight: bold;
 }
 .head_content::before {
+  position: absolute;
+  display: none;
 	content: "";
-	position: absolute;
 	top: 60%;
-	left: -30px;
+	left: 0px;
  	margin-top: -15px;
 	border: 15px solid transparent;
-  border-right: 15px solid #444;
+  border-right: 15px solid #fff;
 }
 .head_content:hover {
   position: relative;
-  width: 80%;
   height: 200%;
+  width: 85%;
   top: -60%;
   z-index: 9999;
   background-color: #ffb7b7;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  white-space: initial;
+  overflow: visible;
+}
+.head_content:hover::before {
+  display: block;
+  left: -30px;
+  border-right: 15px solid #ffb7b7;
 }
 
 /* -------------------------------
@@ -209,7 +224,7 @@ body {
   margin-right: 10em;
 }
 .external_page ul li:last-child { /* 上でできたマージンは最後に入らないので相殺　*/
-  margin-right: -10em;
+  margin-right: 0;
 }
 .external_page ul li a {
   text-decoration: none;
