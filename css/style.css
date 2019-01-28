@@ -12,7 +12,8 @@ body {
   font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .clearfix::after {
   content: '';
@@ -21,7 +22,18 @@ body {
 }
 .partition {
   border-width: 0 0 1px;
-  border-image: linear-gradient(
+  -o-border-image: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 0%, 0.5) 50%,
+    hsla(0, 0%, 100%, 0) 100%) 0 0 100%;
+     border-image: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(hsla(0, 0%, 100%, 0)),
+    color-stop(50%, hsla(0, 0%, 0%, 0.5)),
+    to(hsla(0, 0%, 100%, 0))) 0 0 100%;
+     border-image: linear-gradient(
     90deg,
     hsla(0, 0%, 100%, 0),
     hsla(0, 0%, 0%, 0.5) 50%,
@@ -29,6 +41,7 @@ body {
   border-style: solid;
 }
 .bold_font {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #ff99ff));
   background: linear-gradient(transparent 60%, #ff99ff 60%);
 }
 
@@ -38,10 +51,12 @@ body {
 .introduce {
   margin: 100px 60px;
   overflow: hidden;
-	transition-duration: 0.8s;	/*変化に掛かる時間*/
+	-webkit-transition-duration: 0.8s;
+	        transition-duration: 0.8s;	/*変化に掛かる時間*/
 }
 .introduce:hover {
-  transform: scale(1.15);	/*画像の拡大率*/
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);	/*画像の拡大率*/
 }
 .introduce .left_content {
   float: left;
@@ -58,20 +73,23 @@ body {
   border-radius: 50%;
   border: 2px solid #444;
 }
+@media (max-width: 1020px) {
+.left_content .image {
+  width: 360px;
+  height: 360px;
+  }
+}
 .left_content .image:hover {
-  animation: spin 10s linear infinite;
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
 }
 @keyframes spin  {
-   0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-}
-@-moz-keyframes spin  {
-   0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+   0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 @-webkit-keyframes spin {
-   0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+   0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 }
 .item-list {
   list-style: none;
@@ -80,17 +98,25 @@ body {
   font-size: 2.2rem;
   letter-spacing: 2px;
   line-height: 3em;
+  -webkit-transition: all 0.15s;
   transition: all 0.15s;
   border: 1px solid #444;
   border-radius: 5px;
   color:  #444;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+          box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   padding: 2px 8px;
   margin-bottom: 8px;
 }
+@media (max-width: 1020px) {
+  .item-list li {
+    font-size: 1.5em;
+  }
+}
 .item-list li:hover {
   color: #d03c56;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+          box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
   border: 1px solid #eee;
 }
 
@@ -159,23 +185,37 @@ body {
  	margin: 1.5em 0 1.5em 10px;
   padding: 20px 30px 20px 20px;
   height: 90%;
-  width: 80%;
+  width: 75%;
  	background: #fff;
   border: 1px solid #000;
   border-radius: 5px;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+          box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
   font-size: 1.8em;
   line-height: 1.5em;
   color: #444;
   white-space: nowrap;
   overflow : hidden;
   text-overflow: ellipsis;
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.head_content p {
-  font-size: 0.8em;
-  display: inline;
+@media (max-width: 1020px) {
+  .head_content {
+    font-size: 1.5em;
+  }
 }
+.head_content p {
+  display: inline;
+  font-size: 0.8em;
+}
+@media (max-width: 1020px) {
+  .head_content p {
+    display: inline;
+    font-size: 0.8em;
+  }
+}
+
 .head_content a {
   text-decoration: none;
   font-weight: bold;
@@ -193,11 +233,12 @@ body {
 .head_content:hover {
   position: relative;
   height: 200%;
-  width: 85%;
+  width: 80%;
   top: -60%;
   z-index: 9999;
   background-color: #ffb7b7;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+          box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
   white-space: initial;
   overflow: visible;
 }
@@ -229,6 +270,7 @@ body {
 .external_page ul li a {
   text-decoration: none;
   color: #000;
+  -webkit-transition: all 0.15s;
   transition: all 0.15s;
   font-weight: bold;
   font-size: 1.1em;
