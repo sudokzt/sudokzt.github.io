@@ -85,7 +85,8 @@ body {
   padding: 2px 8px;
   margin-bottom: 8px;
 }
-.item-list li:hover {
+.item-list li:hover,
+.item-list li:active, {
   color: #d03c56;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
   border: 1px solid #eee;
