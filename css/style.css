@@ -28,6 +28,9 @@ body {
     hsla(0, 0%, 100%, 0) 100%) 0 0 100%;
   border-style: solid;
 }
+.bold_font {
+  background: linear-gradient(transparent 60%, #ff99ff 60%);
+}
 
 /* -------------------------------
  * 基本情報
@@ -156,7 +159,7 @@ body {
  	margin: 1.5em 0 1.5em 10px;
   padding: 20px 30px 20px 20px;
   height: 90%;
-  max-width: 80%;
+  width: 80%;
  	background: #fff;
   border: 1px solid #000;
   border-radius: 5px;
@@ -169,9 +172,13 @@ body {
   text-overflow: ellipsis;
   transition: all 0.3s linear;
 }
-.head_content p{
+.head_content p {
   font-size: 0.8em;
   display: inline;
+}
+.head_content a {
+  text-decoration: none;
+  font-weight: bold;
 }
 .head_content::before {
   position: absolute;
@@ -186,7 +193,7 @@ body {
 .head_content:hover {
   position: relative;
   height: 200%;
-  width: 80%;
+  width: 85%;
   top: -60%;
   z-index: 9999;
   background-color: #ffb7b7;
