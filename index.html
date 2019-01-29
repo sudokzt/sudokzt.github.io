@@ -4,37 +4,42 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
   <title>Kazu's Introduce</title>
 </head>
 <body>
-  <article class="introduce clearfix">
-    <section class="left_content">
-      <img class="image" src="images/myPhoto.jpg" alt="カーズの写真" ontouchstart="">
-    </section>
-    <section class="right_content">
-      <ul class="item-list">
-        <li ontouchstart="">Name: カーズ(Kazuto Mishima)</li>
-        <li ontouchstart="">Age: 19歳 (1999.02.15)</li>
-        <li ontouchstart="">College: 大阪経済大学　経営学部</li>
-        <li ontouchstart="">Company: 京都イノベーション(株)</li>
-        <li ontouchstart="">Hobby: ヒッチハイク</li>
-        <li ontouchstart="">Skill: C++/React/PHP/インフラ</li>
-      </ul>
-    </section>
-  </article>
-  <hr class="partition">
-  <article class="external_page">
-    <ul>
-      <li><a href="https://twitter.com/k_zt0215" target="_blank">Twitter</a></li>
-      <li><a href="https://www.facebook.com/kazuto0215" target="_blank">Facebook</a></li>
-      <li><a href="https://github.com/sudokzt" target="_blank">GitHub</a></li>
-    </ul>
-  </article>
+  <article class="introduce box">
+    <div class="sub_title">Introduce</div>
+    <div class="clearfix">
+      <section class="left_content">
+        <img class="image" src="images/myPhoto.jpg" alt="カーズの写真" width="450px" height="450px" ontouchstart="">
+      </section>
+      <section class="right_content">
+        <ul class="item-list">
+          <li ontouchstart="">Name: カーズ(Kazuto Mishima)</li>
+          <li ontouchstart="">Age: 19歳 (1999.02.15)</li>
+          <li ontouchstart="">College: 大阪経済大学　経営学部</li>
+          <li ontouchstart="">Company: 京都イノベーション(株)</li>
+          <li ontouchstart="">Hobby: ヒッチハイク</li>
+          <li ontouchstart="">Skill: C++/React/PHP/インフラ</li>
+        </ul>
+      </section>
+    </div>
 
-  <hr class="partition">
+    <article class="external_page">
+      <ul>
+        <li><a href="https://twitter.com/k_zt0215" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/kazuto0215" target="_blank">Facebook</a></li>
+        <li><a href="https://github.com/sudokzt" target="_blank">GitHub</a></li>
+      </ul>
+    </article>
+    <hr class="partition">
+  </article>
 
   <!-- 2ページ目 -->
-  <article class="history">
+  <article class="history box">
+    <div class="sub_title">History</div>
     <section class="history_list">
       <ul>
         <div class="info_content">
@@ -68,8 +73,9 @@
         <div class="vertical_line"></div>
         <li class="head_content" ontouchstart="">
           <h2><span class="bold_font">Unity</span>を使った初めての<span class="bold_font">ゲームを作成</span></h2>
-          <p>人生で2個目(１個目はCで作ったオセロ)のゲームをUnityで作りました。当時はまっていたBATTLEFIELDがUnityで作られていたからです。この時に触ったC#という言語、分からないながらも、なんとか完成させることができました。内容はキャラクターを操作して5つのステージをクリアする時間を競うというシンプルなものです。<video controls autoplay loop>
-              <source src="movie/unity-3d.mp4">ゲーム動画</video></p>
+          <p>人生で2個目(１個目はCで作ったオセロ)のゲームをUnityで作りました。当時はまっていたBATTLEFIELDがUnityで作られていたからです。この時に触ったC#という言語、分からないながらも、なんとか完成させることができました。内容はキャラクターを操作して5つのステージをクリアする時間を競うというシンプルなものです。今は配信していないので動画だけ⇨ <a href="https://youtu.be/43HPEuINvoI">ゲーム動画</a>
+            <!-- <video controls autoplay ><source src="movie/unity-3d.mp4">ゲーム動画</video> -->
+          </p>
         </li>
       </ul>
       <ul>
@@ -93,7 +99,7 @@
         <div class="vertical_line"></div>
         <li class="head_content" ontouchstart="">
           <h2>父親の影響で<span class="bold_font">経営者になりたい</span>思う</h2>
-          <p>うちの親父は地元で寝具店をしています。まあ尊敬できる親父で日本に「蚊帳」っていう文化を復活させたり、アフリカに何百万を寄付したりと、その結果『市民賞』までいただいて....。</p>
+          <p>うちの親父は地元で寝具店をしています。まあ尊敬できる親父で日本に「蚊帳」っていう文化を復活させたり、アフリカに数百万円の寄付したりと、その結果『市民賞』までいただいて....。</p>
           <p>そんな親父の姿を近くで見ていた僕は、「人のこと幸せに出来る人ってかっけえな」って思い始めました。技術が好きだったので理系に行くつもりだったのですが、完全に進路を変えて経営学部に進学することを決めました。<a href="https://anmin.com/"> 親父の会社</a></p>
         </li>
       </ul>
@@ -163,7 +169,7 @@
         <li class="head_content" ontouchstart="">
           <h2><span class="bold_font">株式会社エウレカ</span> インターンで<span class="bold_font">優勝</span></h2>
           <p>マッチングアプリ「Pairs」で有名な株式会社エウレカのWebフロントチームで２週間のインターンをさせていただきました。
-              Pairs開発では主にReactが使われているのですが、僕の当時のReactの知識はミジンコレベルでした。必死に努力して、前半・後半と別れたインターンで個人戦の前半を突破して、チーム戦の後半戦で優勝をすることが出来ました。様々な技術に触れることができ、本当に良いインターンでした。<a href="http://www.eurk.jp/">株式会社エウレカ</a>
+              Pairs開発では主にReactが使われているのですが、僕の当時のReactの知識はミジンコレベルでした。必死に努力して、前半・後半と別れたインターンで個人戦の前半を突破して、チーム戦の後半で優勝をすることが出来ました。様々な技術に触れることができ、本当に良いインターンでした。<a href="http://www.eurk.jp/">株式会社エウレカ</a>
             </p>
         </li>
       </ul>
@@ -192,17 +198,18 @@
         </li>
       </ul>
     </section>
+    <hr class="partition">
+    <footer>
+      <article class="external_page">
+        <ul>
+          <li><a href="https://twitter.com/k_zt0215" target="_blank">Twitter</a></li>
+          <li><a href="https://www.facebook.com/kazuto0215" target="_blank">Facebook</a></li>
+          <li><a href="https://github.com/sudokzt" target="_blank">GitHub</a></li>
+        </ul>
+      </article>
+      <div>@ 2019 sudokzt</div>
+    </footer>
   </article>
-  <hr class="partition">
-  <footer>
-    <article class="external_page">
-      <ul>
-        <li><a href="https://twitter.com/k_zt0215" target="_blank">Twitter</a></li>
-        <li><a href="https://www.facebook.com/kazuto0215" target="_blank">Facebook</a></li>
-        <li><a href="https://github.com/sudokzt" target="_blank">GitHub</a></li>
-      </ul>
-    </article>
-    <div>@ 2019 sudokzt</div>
-  </footer>
+  <script src="./js/index.js"></script>
 </body>
 </html>
